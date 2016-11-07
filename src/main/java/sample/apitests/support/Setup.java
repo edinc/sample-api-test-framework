@@ -13,4 +13,11 @@ import java.util.Map;
 import static io.restassured.RestAssured.given;
 
 public class Setup {
+
+    public static final String URI = "https://echo.getpostman.com";
+
+    @BeforeClass
+    public static void setup() {
+        RestAssured.baseURI = URI;
+    }
 }
